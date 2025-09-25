@@ -1,7 +1,84 @@
-const hamBurger = document.querySelector(".toggle-btn");
-
-hamBurger.addEventListener("click", function () {
-  document.querySelector("#sidebar").classList.toggle("expand");
+// Unified Sidebar Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    const main = document.querySelector('.main');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    
+    // Initialize sidebar state based on screen size
+    function initializeSidebar() {
+        if (window.innerWidth <= 768) {
+            // Mobile: collapsed by default
+            sidebar.classList.remove('expand');
+            main.classList.add('sidebar-collapsed');
+        } else {
+            // Desktop: expanded by default
+            sidebar.classList.add('expand');
+            main.classList.remove('sidebar-collapsed');
+        }
+    }
+    
+    // Toggle sidebar function
+    function toggleSidebar() {
+        sidebar.classList.toggle('expand');
+        main.classList.toggle('sidebar-collapsed');
+        
+        // Add visual feedback
+        const icon = toggleBtn.querySelector('i');
+        if (sidebar.classList.contains('expand')) {
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+    
+    // Event listeners for both toggle buttons
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', toggleSidebar);
+    }
+    
+    if (sidebarToggle && sidebarToggle !== toggleBtn) {
+        sidebarToggle.addEventListener('click', toggleSidebar);
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        clearTimeout(window.resizeTimer);
+        window.resizeTimer = setTimeout(initializeSidebar, 250);
+    });
+    
+    // Initialize on load
+    initializeSidebar();
+    
+    // Close sidebar when clicking outside on mobile
+    if (window.innerWidth <= 768) {
+        document.addEventListener('click', function(e) {
+            if (sidebar.classList.contains('expand') && 
+                !sidebar.contains(e.target) && 
+                !toggleBtn.contains(e.target)) {
+                sidebar.classList.remove('expand');
+                main.classList.add('sidebar-collapsed');
+            }
+        });
+    }
+    
+    // Add keyboard support (ESC to close sidebar on mobile)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && window.innerWidth <= 768 && sidebar.classList.contains('expand')) {
+            sidebar.classList.remove('expand');
+            main.classList.add('sidebar-collapsed');
+        }
+    });
+    
+    // Debug: Log sidebar state changes (remove in production)
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                console.log('Sidebar state:', sidebar.classList.contains('expand') ? 'expanded' : 'collapsed');
+            }
+        });
+    });
+    observer.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
 });
 
 

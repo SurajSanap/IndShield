@@ -38,6 +38,10 @@ body {
     background-color: #fafbfe;
 }
 
+.main.sidebar-collapsed {
+    padding-left: 70px;
+}
+
 #sidebar {
     position: fixed;
     top: 0;
@@ -59,16 +63,90 @@ body {
     min-width: 260px;
 }
 
+#sidebar:not(.expand) {
+    width: 70px;
+    min-width: 70px;
+}
+
+#sidebar:not(.expand) .sidebar-logo a,
+#sidebar:not(.expand) .sidebar-link span {
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-link {
+    padding: 1rem 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-left: none;
+    width: 70px;
+}
+
+#sidebar:not(.expand) .sidebar-link i {
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 1.3rem;
+    width: auto;
+    text-align: center;
+}
+
+#sidebar:not(.expand) .sidebar-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar:not(.expand) .sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: none;
+    border-radius: 8px;
+    margin: 0 8px;
+    width: 54px;
+}
+
+#sidebar:not(.expand) .toggle-btn {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+#sidebar:not(.expand) .sidebar-logo {
+    display: none;
+}
+
 .toggle-btn {
     background-color: transparent;
     cursor: pointer;
     border: 0;
     padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.toggle-btn:active {
+    transform: scale(0.95);
 }
 
 .toggle-btn i {
     font-size: 1.5rem;
     color: #FFF;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover i {
+    color: #3b7ddd;
 }
 
 .sidebar-logo {
@@ -94,10 +172,13 @@ body {
 a.sidebar-link {
     padding: .625rem 1.625rem;
     color: #FFF;
-    display: block;
+    display: flex;
+    align-items: center;
     font-size: 0.9rem;
     white-space: nowrap;
     border-left: 3px solid transparent;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .sidebar-link i {
