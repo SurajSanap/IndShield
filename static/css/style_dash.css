@@ -177,7 +177,6 @@ a.sidebar-link {
     font-size: 0.9rem;
     white-space: nowrap;
     border-left: 3px solid transparent;
-    text-decoration: none;
     transition: all 0.3s ease;
 }
 

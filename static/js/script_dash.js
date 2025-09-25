@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
 });
 
-
+// Additional functionality for Lottie animations
 document.addEventListener("DOMContentLoaded", function () {
   // Load Lottie.js for animations
   const script = document.createElement("script");
