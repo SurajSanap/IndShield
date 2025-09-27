@@ -1,7 +1,7 @@
 import os
-# import cv2
+import cv2
 import base64
-# import threading
+import threading
 import logging
 from datetime import datetime, timedelta
 from flask import Flask, render_template, Response, request, redirect, flash, jsonify, session
@@ -9,11 +9,11 @@ import requests
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-# from werkzeug.utils import secure_filename
+from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
-# from playsound import playsound
+from playsound import playsound
 from dotenv import load_dotenv
-# from twilio.rest import Client
+from twilio.rest import Client
 
 # Load environment variables
 load_dotenv()
@@ -29,18 +29,18 @@ logging.basicConfig(
     ]
 )
 
-# Twilio client setup (commented out for chatbot testing)
-# account_sid = os.getenv('TWILIO_ACCOUNT_SID')
-# auth_token = os.getenv('TWILIO_AUTH_TOKEN')
-# client = Client(account_sid, auth_token)
+# Twilio client setup 
+account_sid = os.getenv('TWILIO_ACCOUNT_SID')
+auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+client = Client(account_sid, auth_token)
 
-# Import detection models (commented out for chatbot testing)
-# from models.r_zone import people_detection
-# from models.fire_detection import fire_detection
-# from models.gear_detection import gear_detection
-# from models.pose_detection import PoseEmergencyDetector
-# from models.motion_amp import amp
-# from models.face_auth import generate_frames
+# Import detection models
+from models.r_zone import people_detection
+from models.fire_detection import fire_detection
+from models.gear_detection import gear_detection
+from models.pose_detection import PoseEmergencyDetector
+from models.motion_amp import amp
+from models.face_auth import generate_frames
 
 # Flask app configuration
 app = Flask(__name__)
@@ -51,8 +51,8 @@ app.config["SQLALCHEMY_BINDS"] = {
     "cams": "sqlite:///cams.db",
     "alerts": "sqlite:///alerts.db"
 }
-# app.config['UPLOAD_FOLDER'] = 'uploads'  # Commented out for chatbot testing
-# ALLOWED_EXTENSIONS = {"mp4"}  # Commented out for chatbot testing
+app.config['UPLOAD_FOLDER'] = 'uploads'  
+ALLOWED_EXTENSIONS = {"mp4"}  
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
@@ -97,24 +97,24 @@ class complaint(db.Model):
     file_data = db.Column(db.LargeBinary)
 
 
-# Initialize detection models (commented out for chatbot testing)
-# r_zone = people_detection("models/yolov8n.pt")
-# fire_det = fire_detection("models/fire.pt", conf=0.60)
-# gear_det = gear_detection("models/gear.pt")
-# pose_detector = PoseEmergencyDetector()
+# Initialize detection models 
+r_zone = people_detection("models/yolov8n.pt")
+fire_det = fire_detection("models/fire.pt", conf=0.60)
+gear_det = gear_detection("models/gear.pt")
+pose_detector = PoseEmergencyDetector()
 
-# Helper function to check file extensions (commented out for chatbot testing)
-# def allowed_file(filename):
-#     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+# Helper function to check file extensions
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-# Play alert sound (commented out for chatbot testing)
-# def play_alert_sound():
-#     try:
-#         for _ in range(3):
-#             playsound(os.path.join('static', 'sounds', 'alert.mp3'))
-#         logging.info("Alert sound played successfully.")
-#     except Exception as e:
-#         logging.error(f"Error playing alert sound: {str(e)}")
+# Play alert sound
+def play_alert_sound():
+    try:
+        for _ in range(3):
+            playsound(os.path.join('static', 'sounds', 'alert.mp3'))
+        logging.info("Alert sound played successfully.")
+    except Exception as e:
+        logging.error(f"Error playing alert sound: {str(e)}")
 
 # Routes
 @app.route('/')
@@ -179,42 +179,41 @@ def register():
 def upload():
     return render_template('VideoUpload.html')
 
-# Commented out for chatbot testing - motion amplification upload functionality
-# @app.route('/upload_file', methods=['POST'])
-# def upload_file():
-#     if 'file' not in request.files:
-#         flash("No file part")
-#         logging.warning("File upload attempted with no file part.")
-#         return redirect("/upload")
-#     file = request.files['file']
-#     if file.filename == '':
-#         flash('No File Selected')
-#         logging.warning("File upload attempted with no file selected.")
-#         return redirect("/upload")
-#     if file and allowed_file(file.filename):
-#         try:
-#             filename = secure_filename(file.filename)
-#             upload_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-#             file.save(upload_path)
-#
-#             in_path = upload_path
-#             out_path = os.path.join("static", "outs", "output.avi")
-#             if os.path.exists(out_path):
-#                 os.remove(out_path)
-#             amp(in_path=in_path, out_path=out_path, alpha=2.5, beta=0.5, m=3)
-#             os.remove(in_path)
-#
-#             flash(f"Your processed video is available <a href='/{out_path}' target='_blank'>here</a>")
-#             logging.info(f"File {filename} processed successfully.")
-#             return redirect("/upload")
-#         except Exception as e:
-#             logging.error(f"Error during file processing: {str(e)}")
-#             flash("Error processing file.")
-#             return redirect("/upload")
-#     else:
-#         flash("File in wrong format!")
-#         logging.warning("File upload attempted with wrong format.")
-#         return redirect("/upload")
+@app.route('/upload_file', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        flash("No file part")
+        logging.warning("File upload attempted with no file part.")
+        return redirect("/upload")
+    file = request.files['file']
+    if file.filename == '':
+        flash('No File Selected')
+        logging.warning("File upload attempted with no file selected.")
+        return redirect("/upload")
+    if file and allowed_file(file.filename):
+        try:
+            filename = secure_filename(file.filename)
+            upload_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(upload_path)
+
+            in_path = upload_path
+            out_path = os.path.join("static", "outs", "output.avi")
+            if os.path.exists(out_path):
+                os.remove(out_path)
+            amp(in_path=in_path, out_path=out_path, alpha=2.5, beta=0.5, m=3)
+            os.remove(in_path)
+
+            flash(f"Your processed video is available <a href='/{out_path}' target='_blank'>here</a>")
+            logging.info(f"File {filename} processed successfully.")
+            return redirect("/upload")
+        except Exception as e:
+            logging.error(f"Error during file processing: {str(e)}")
+            flash("Error processing file.")
+            return redirect("/upload")
+    else:
+        flash("File in wrong format!")
+        logging.warning("File upload attempted with wrong format.")
+        return redirect("/upload")
 
 @app.route('/<int:id>/submit_complaint_submited', methods=['GET', 'POST'])
 def submit_complaint_submited(id):
@@ -238,28 +237,27 @@ def submit_complaint_submited(id):
             flash("Error recording complaint_submited.")
             return redirect(f'/complaint/{id}')
 
-# Commented out for chatbot testing - fire detection functionality
-# @app.route('/fire-detected', methods=['POST'])
-# def fire_detected():
-#     try:
-#         send_alert_message()
-#         threading.Thread(target=play_alert_sound).start()
-#         logging.info("Fire alert triggered.")
-#         return jsonify({"message": "Fire alert triggered successfully!"}), 200
-#     except Exception as e:
-#         logging.error(f"Error triggering fire alert: {str(e)}")
-#         return jsonify({"error": str(e)}), 500
+@app.route('/fire-detected', methods=['POST'])
+def fire_detected():
+    try:
+        send_alert_message()
+        threading.Thread(target=play_alert_sound).start()
+        logging.info("Fire alert triggered.")
+        return jsonify({"message": "Fire alert triggered successfully!"}), 200
+    except Exception as e:
+        logging.error(f"Error triggering fire alert: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
-# def send_alert_message():
-#     try:
-#         message = client.messages.create(
-#             body="Fire detected! Please take immediate action.",
-#             from_=os.getenv('TWILIO_PHONE_NUMBER'),
-#             to=os.getenv('ADMIN_PHONE_NUMBER')
-#         )
-#         logging.info(f"SMS sent successfully. Message SID: {message.sid}")
-#     except Exception as e:
-#         logging.error(f"Error sending SMS: {str(e)}")
+def send_alert_message():
+    try:
+        message = client.messages.create(
+            body="Fire detected! Please take immediate action.",
+            from_=os.getenv('TWILIO_PHONE_NUMBER'),
+            to=os.getenv('ADMIN_PHONE_NUMBER')
+        )
+        logging.info(f"SMS sent successfully. Message SID: {message.sid}")
+    except Exception as e:
+        logging.error(f"Error sending SMS: {str(e)}")
 
 @app.route('/dashboard')
 @login_required
@@ -405,29 +403,28 @@ def logout():
         logging.error(f"Error during logout: {str(e)}")
     return redirect('/')
 
-# Commented out for chatbot testing - video feed functionality
-# @app.route('/video_feed/<string:Cam_id>')
-# @login_required
-# def video_feed(Cam_id):
-#     camera = Camera.query.filter_by(Cam_id=str(Cam_id), user_id=current_user.id).first()
-#     if camera:
-#         flag_r_zone = camera.restricted_zone
-#         flag_pose_alert = camera.pose_alert
-#         flag_fire = camera.fire_detection
-#         flag_gear = camera.safety_gear_detection
-#         region = camera.region
-# 
-#         try:
-#             logging.info(f"Video feed accessed for camera ID {Cam_id} by user {current_user.username}.")
-#             return Response(process_frames(str(Cam_id), region, flag_r_zone, flag_pose_alert,
-#                                            flag_fire, flag_gear, current_user.id),
-#                             mimetype='multipart/x-mixed-replace; boundary=frame')
-#         except Exception as e:
-#             logging.error(f"Error accessing video feed for camera ID {Cam_id}: {str(e)}")
-#             return f"Error occurred: {str(e)}"
-#     else:
-#         logging.warning(f"Camera ID {Cam_id} not found for user {current_user.username}.")
-#         return "Camera details not found."
+@app.route('/video_feed/<string:Cam_id>')
+@login_required
+def video_feed(Cam_id):
+    camera = Camera.query.filter_by(Cam_id=str(Cam_id), user_id=current_user.id).first()
+    if camera:
+        flag_r_zone = camera.restricted_zone
+        flag_pose_alert = camera.pose_alert
+        flag_fire = camera.fire_detection
+        flag_gear = camera.safety_gear_detection
+        region = camera.region
+
+        try:
+            logging.info(f"Video feed accessed for camera ID {Cam_id} by user {current_user.username}.")
+            return Response(process_frames(str(Cam_id), region, flag_r_zone, flag_pose_alert,
+                                           flag_fire, flag_gear, current_user.id),
+                            mimetype='multipart/x-mixed-replace; boundary=frame')
+        except Exception as e:
+            logging.error(f"Error accessing video feed for camera ID {Cam_id}: {str(e)}")
+            return f"Error occurred: {str(e)}"
+    else:
+        logging.warning(f"Camera ID {Cam_id} not found for user {current_user.username}.")
+        return "Camera details not found."
     
 #-----------CHATBOT-----------------
 API_KEY = os.getenv("GEMINI_API_KEY")
@@ -490,19 +487,18 @@ def chatbot_api():
             }), 500
 
 #----------------------
+# Face authentication routes 
+@app.route('/upload_employee', methods=['GET', 'POST'])
+def upload_employee_route():
+    return upload_employee()
 
-# Face authentication routes (commented out for chatbot testing)
-# @app.route('/upload_employee', methods=['GET', 'POST'])
-# def upload_employee_route():
-#     return upload_employee()
+@app.route('/live_recognition')
+def live_recognition_route():
+    return live_recognition()
 
-# @app.route('/live_recognition')
-# def live_recognition_route():
-#     return live_recognition()
-
-# @app.route('/manage_employees')
-# def manage_employees_route():
-#     return manage_employees()
+@app.route('/manage_employees')
+def manage_employees_route():
+    return manage_employees()
 
 @app.route('/face_auth')
 def face_auth_page():
@@ -513,119 +509,119 @@ def about():
     return render_template('about.html')
 
 
-# ML processing functions (commented out for chatbot testing)
-# def add_to_db(results, frame, alert_name, user_id=None):
-#     if isinstance(results[0], bool) and results[0]:
-#         for box in results[1]:
-#             x1, y1, x2, y2 = box
-#             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
-# 
-#         with app.app_context():
-#             latest_alert = Alert.query.filter_by(alert_type=alert_name, user_id=user_id).order_by(Alert.date_time.desc()).first()
-#             if (latest_alert is None) or ((datetime.now() - latest_alert.date_time) > timedelta(minutes=1)):
-#                 new_alert = Alert(
-#                     date_time=datetime.now(),
-#                     alert_type=alert_name,
-#                     frame_snapshot=cv2.imencode('.jpg', frame)[1].tobytes(),
-#                     user_id=user_id
-#                 )
-#                 db.session.add(new_alert)
-#                 db.session.commit()
-#                 logging.info(f"Added alert of type {alert_name} for user ID {user_id}.")
+# ML processing functions
+def add_to_db(results, frame, alert_name, user_id=None):
+    if isinstance(results[0], bool) and results[0]:
+        for box in results[1]:
+            x1, y1, x2, y2 = box
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
 
-# def process_frames(camid, region, flag_r_zone=False, flag_pose_alert=False, flag_fire=False, flag_gear=False, user_id=None):
-#     """
-#     Process video frames and apply detection logic.
-#     """
-#     # Use numeric camera index if camid is digit, else assume URL
-#     if camid.isdigit():
-#         cap = cv2.VideoCapture(int(camid))
-#     else:
-#         address = f"http://{camid}/video"
-#         cap = cv2.VideoCapture(address)
-# 
-#     persistent_boxes = {
-#         "restricted_zone": [],
-#         "fire": [],
-#         "gear": []
-#     }
-# 
-#     while cap.isOpened():
-#         ret, frame = cap.read()
-#         if not ret:
-#             logging.warning(f"No frames received from camera ID {camid}.")
-#             break
-# 
-#         try:
-#             # Resize frame to desired size
-#             frame = cv2.resize(frame, (1280, 720))
-# 
-#             # Build overlay text for active processes
-#             processes = []
-#             if flag_r_zone:
-#                 processes.append("Restricted Zone Detection")
-#             if flag_fire:
-#                 processes.append("Fire Detection")
-#             if flag_gear:
-#                 processes.append("Safety Gear Detection")
-#             if flag_pose_alert:
-#                 processes.append("Pose Detection")
-# 
-#             # Pose detection processing
-#             if flag_pose_alert:
-#                 def alert_callback(alerts):
-#                     for alert in alerts:
-#                         threading.Thread(target=play_alert_sound).start()
-#                         add_to_db((True, [alert['bbox']]), alert['frame'], "Emergency Pose Detected", user_id)
-#                 frame = pose_detector.process_frame(frame, alert_callback)
-# 
-#             # Restricted zone detection
-#             if flag_r_zone:
-#                 r_zone_status, r_zone_boxes = r_zone.process(frame, region=region, flag=flag_r_zone)
-#                 if r_zone_status:
-#                     persistent_boxes["restricted_zone"] = r_zone_boxes
-#                 for box in persistent_boxes["restricted_zone"]:
-#                     x1, y1, x2, y2 = box
-#                     cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
-#                     cv2.putText(frame, "Restricted Zone Violation", (x1, y1 - 10),
-#                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
-# 
-#             # Fire detection
-#             if flag_fire:
-#                 fire_status, fire_boxes = fire_det.process(frame, flag=flag_fire)
-#                 if fire_status:
-#                     persistent_boxes["fire"] = fire_boxes
-#                 for box in persistent_boxes["fire"]:
-#                     x1, y1, x2, y2 = box
-#                     cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
-#                     cv2.putText(frame, "Fire Detected", (x1, y1 - 10),
-#                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-# 
-#             # Safety gear detection
-#             if flag_gear:
-#                 gear_status, gear_boxes = gear_det.process(frame, flag=flag_gear)
-#                 if gear_status:
-#                     persistent_boxes["gear"] = gear_boxes
-#                 for box in persistent_boxes["gear"]:
-#                     x1, y1, x2, y2 = box
-#                     cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-#                     cv2.putText(frame, "Gear Detected", (x1, y1 - 10),
-#                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-# 
-#             # Overlay active process text
-#             overlay_text = " + ".join(processes)
-#             cv2.putText(frame, overlay_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-# 
-#             # Encode and yield the frame
-#             _, buffer = cv2.imencode('.jpg', frame)
-#             frame_bytes = buffer.tobytes()
-#             yield (b'--frame\r\n'
-#                    b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
-#         except Exception as e:
-#             logging.error(f"Error processing frame from camera ID {camid}: {e}")
-#             continue
-# 
-#     cap.release()
+        with app.app_context():
+            latest_alert = Alert.query.filter_by(alert_type=alert_name, user_id=user_id).order_by(Alert.date_time.desc()).first()
+            if (latest_alert is None) or ((datetime.now() - latest_alert.date_time) > timedelta(minutes=1)):
+                new_alert = Alert(
+                    date_time=datetime.now(),
+                    alert_type=alert_name,
+                    frame_snapshot=cv2.imencode('.jpg', frame)[1].tobytes(),
+                    user_id=user_id
+                )
+                db.session.add(new_alert)
+                db.session.commit()
+                logging.info(f"Added alert of type {alert_name} for user ID {user_id}.")
+
+def process_frames(camid, region, flag_r_zone=False, flag_pose_alert=False, flag_fire=False, flag_gear=False, user_id=None):
+    """
+    Process video frames and apply detection logic.
+    """
+    # Use numeric camera index if camid is digit, else assume URL
+    if camid.isdigit():
+        cap = cv2.VideoCapture(int(camid))
+    else:
+        address = f"http://{camid}/video"
+        cap = cv2.VideoCapture(address)
+
+    persistent_boxes = {
+        "restricted_zone": [],
+        "fire": [],
+        "gear": []
+    }
+
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            logging.warning(f"No frames received from camera ID {camid}.")
+            break
+
+        try:
+            # Resize frame to desired size
+            frame = cv2.resize(frame, (1280, 720))
+
+            # Build overlay text for active processes
+            processes = []
+            if flag_r_zone:
+                processes.append("Restricted Zone Detection")
+            if flag_fire:
+                processes.append("Fire Detection")
+            if flag_gear:
+                processes.append("Safety Gear Detection")
+            if flag_pose_alert:
+                processes.append("Pose Detection")
+
+            # Pose detection processing
+            if flag_pose_alert:
+                def alert_callback(alerts):
+                    for alert in alerts:
+                        threading.Thread(target=play_alert_sound).start()
+                        add_to_db((True, [alert['bbox']]), alert['frame'], "Emergency Pose Detected", user_id)
+                frame = pose_detector.process_frame(frame, alert_callback)
+
+            # Restricted zone detection
+            if flag_r_zone:
+                r_zone_status, r_zone_boxes = r_zone.process(frame, region=region, flag=flag_r_zone)
+                if r_zone_status:
+                    persistent_boxes["restricted_zone"] = r_zone_boxes
+                for box in persistent_boxes["restricted_zone"]:
+                    x1, y1, x2, y2 = box
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
+                    cv2.putText(frame, "Restricted Zone Violation", (x1, y1 - 10),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
+
+            # Fire detection
+            if flag_fire:
+                fire_status, fire_boxes = fire_det.process(frame, flag=flag_fire)
+                if fire_status:
+                    persistent_boxes["fire"] = fire_boxes
+                for box in persistent_boxes["fire"]:
+                    x1, y1, x2, y2 = box
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
+                    cv2.putText(frame, "Fire Detected", (x1, y1 - 10),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+
+            # Safety gear detection
+            if flag_gear:
+                gear_status, gear_boxes = gear_det.process(frame, flag=flag_gear)
+                if gear_status:
+                    persistent_boxes["gear"] = gear_boxes
+                for box in persistent_boxes["gear"]:
+                    x1, y1, x2, y2 = box
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                    cv2.putText(frame, "Gear Detected", (x1, y1 - 10),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
+            # Overlay active process text
+            overlay_text = " + ".join(processes)
+            cv2.putText(frame, overlay_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+
+            # Encode and yield the frame
+            _, buffer = cv2.imencode('.jpg', frame)
+            frame_bytes = buffer.tobytes()
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
+        except Exception as e:
+            logging.error(f"Error processing frame from camera ID {camid}: {e}")
+            continue
+
+    cap.release()
 
 # Gemini API routes for chatbot functionality
 def test_gemini_endpoints(api_key, test_message="Hello", max_tokens=2048):
