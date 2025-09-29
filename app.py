@@ -516,10 +516,25 @@ def manage_employees_route():
 def face_auth_page():
     return render_template('face_auth.html')
 
+
+def get_contributors():
+    """Fetches contributor data from the GitHub API."""
+    owner = 'SurajSanap'
+    repo = 'IndShield'
+    url = f"https://api.github.com/repos/{owner}/{repo}/contributors"
+    
+    try:
+        response = requests.get(url)
+        response.raise_for_status() # Raise an error for bad responses (4xx or 5xx)
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching contributors: {e}")
+        return []
+
 @app.route('/about')
 def about():
-    return render_template('about.html')
-
+    contributors_data = get_contributors()
+    return render_template('about.html', contributors=contributors_data)
 
 # ML processing functions
 def add_to_db(results, frame, alert_name, user_id=None):

@@ -48212,3 +48212,21 @@ WHERE camera."Cam_id" = ? AND camera.user_id = ?
 2025-09-27 15:45:27,947 - INFO - 127.0.0.1 - - [27/Sep/2025 15:45:27] "GET /video_feed/10.225.231.18:8080 HTTP/1.1" 200 -
 2025-09-27 15:45:46,803 - WARNING - No frames received from camera ID 10.225.231.18:8080.
 2025-09-27 15:54:39,798 - INFO -  * Detected change in 'S:\\CODE\\GitHub OpenSource\\IndShield\\app.py', reloading
+2025-09-29 14:43:14,689 - DEBUG - matplotlib data path: C:\GSSOC\IndShield\venv\lib\site-packages\matplotlib\mpl-data
+2025-09-29 14:43:14,695 - DEBUG - CONFIGDIR=C:\Users\019176\.matplotlib
+2025-09-29 14:43:14,697 - DEBUG - interactive is False
+2025-09-29 14:43:14,697 - DEBUG - platform is win32
+2025-09-29 14:43:14,764 - DEBUG - CACHEDIR=C:\Users\019176\.matplotlib
+2025-09-29 14:43:14,770 - DEBUG - Using fontManager instance from C:\Users\019176\.matplotlib\fontlist-v390.json
+2025-09-29 14:43:15,648 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-29 14:43:15,648 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 14:43:15,652 - INFO -  * Restarting with stat
+2025-09-29 14:43:18,312 - DEBUG - matplotlib data path: C:\GSSOC\IndShield\venv\lib\site-packages\matplotlib\mpl-data
+2025-09-29 14:43:18,317 - DEBUG - CONFIGDIR=C:\Users\019176\.matplotlib
+2025-09-29 14:43:18,318 - DEBUG - interactive is False
+2025-09-29 14:43:18,319 - DEBUG - platform is win32
+2025-09-29 14:43:18,369 - DEBUG - CACHEDIR=C:\Users\019176\.matplotlib
+2025-09-29 14:43:18,373 - DEBUG - Using fontManager instance from C:\Users\019176\.matplotlib\fontlist-v390.json
+2025-09-29 14:43:19,005 - WARNING -  * Debugger is active!
+2025-09-29 14:43:19,010 - INFO -  * Debugger PIN: 131-335-467
