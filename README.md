@@ -1,6 +1,6 @@
 <h1 align="center"> IndShield: </h1>
 
-<h3> Cutting-Edge Web App for Enhanced Industrial Safety </h3>
+<h3 align="center"> Cutting-Edge Web App for Enhanced Industrial Safety </h3>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
@@ -8,12 +8,14 @@
 
 - <a href="#overview"> Overview </a>
 - <a href="#project-insights"> Project Insights </a>
-- <a href="#demo"> Live Demo </a>
+- <a href="#demo"> Video Link </a>
 - <a href="#screenshots"> Screenshots </a>
-- <a href="#core-features">Core Features</a>
-- <a href="#technology-stack"> Technology Stack </a>
+- <a href="#key-features">Key Features</a>
+- <a href="#benefits"> Benefits : </a>
+- <a href="#file-structure"> File Structure </a>
+- <a href="#working"> Working </a>
 - <a href="#setup-instructions"> Setup Instructions </a>
-- <a href="#roadmap-enhancements">  Roadmap & Future Enhancements </a>
+- <a href="#featured-in"> Featured In: </a>
 - <a href="#acknowledgments">Acknowledgments</a>
 - <a href="#contact">Contact</a>
 - <a href="#how-to-contribute">How to Contribute</a>
@@ -271,7 +273,7 @@ Report bugs and issues or propose improvements through our GitHub repository's "
 
 ## Contribution Guidelines 📑
 
-- Firstly Star(⭐) the Repository
+- Firstly Star (⭐) the Repository
 - Fork the Repository and create a new branch for any updates/changes/issue you are working on.
 - Start Coding and do changes.
 - Commit your changes
