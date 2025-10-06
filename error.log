@@ -48212,3 +48212,693 @@ WHERE camera."Cam_id" = ? AND camera.user_id = ?
 2025-09-27 15:45:27,947 - INFO - 127.0.0.1 - - [27/Sep/2025 15:45:27] "GET /video_feed/10.225.231.18:8080 HTTP/1.1" 200 -
 2025-09-27 15:45:46,803 - WARNING - No frames received from camera ID 10.225.231.18:8080.
 2025-09-27 15:54:39,798 - INFO -  * Detected change in 'S:\\CODE\\GitHub OpenSource\\IndShield\\app.py', reloading
+2025-09-28 14:29:49,892 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 14:29:49,929 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:29:49,932 - DEBUG - interactive is False
+2025-09-28 14:29:49,932 - DEBUG - platform is win32
+2025-09-28 14:29:50,016 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:29:50,017 - DEBUG - font search path [WindowsPath('C:/Users/DELL/IndShield/venv/Lib/site-packages/matplotlib/mpl-data/fonts/ttf'), WindowsPath('C:/Users/DELL/IndShield/venv/Lib/site-packages/matplotlib/mpl-data/fonts/afm'), WindowsPath('C:/Users/DELL/IndShield/venv/Lib/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts')]
+2025-09-28 14:29:55,034 - WARNING - Matplotlib is building the font cache; this may take a moment.
+2025-09-28 14:29:56,372 - INFO - generated new fontManager
+2025-09-28 14:30:06,784 - ERROR - Error: Directory migrations already exists and is not empty
+2025-09-28 14:30:11,650 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 14:30:11,650 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:11,659 - DEBUG - interactive is False
+2025-09-28 14:30:11,659 - DEBUG - platform is win32
+2025-09-28 14:30:11,732 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:11,752 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 14:30:21,120 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 14:30:21,122 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:21,129 - DEBUG - interactive is False
+2025-09-28 14:30:21,130 - DEBUG - platform is win32
+2025-09-28 14:30:21,219 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:21,223 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 14:30:41,807 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 14:30:41,819 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:41,827 - DEBUG - interactive is False
+2025-09-28 14:30:41,827 - DEBUG - platform is win32
+2025-09-28 14:30:41,900 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:41,900 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 14:30:46,629 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-28 14:30:46,630 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-28 14:30:46,634 - INFO -  * Restarting with stat
+2025-09-28 14:30:49,913 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 14:30:49,913 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:49,913 - DEBUG - interactive is False
+2025-09-28 14:30:49,929 - DEBUG - platform is win32
+2025-09-28 14:30:49,980 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:30:49,997 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 14:30:54,675 - WARNING -  * Debugger is active!
+2025-09-28 14:30:54,685 - INFO -  * Debugger PIN: 134-175-910
+2025-09-28 14:31:55,916 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:55] "GET / HTTP/1.1" 200 -
+2025-09-28 14:31:56,341 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/css/style2.css HTTP/1.1" 200 -
+2025-09-28 14:31:56,366 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/css/text-animation.css HTTP/1.1" 200 -
+2025-09-28 14:31:56,375 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/css/nav-animation.css HTTP/1.1" 200 -
+2025-09-28 14:31:56,379 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/css/glass-spark.css HTTP/1.1" 200 -
+2025-09-28 14:31:56,380 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/css/dark-theme.css HTTP/1.1" 200 -
+2025-09-28 14:31:56,382 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-09-28 14:31:56,389 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/css/style1.css HTTP/1.1" 200 -
+2025-09-28 14:31:56,473 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-09-28 14:31:56,512 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:56] "GET /static/img/Smart%20Industry.json HTTP/1.1" 200 -
+2025-09-28 14:31:57,110 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:57] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-28 14:31:57,686 - INFO - 127.0.0.1 - - [28/Sep/2025 14:31:57] "GET /static/img/favicon.png HTTP/1.1" 200 -
+2025-09-28 14:36:50,786 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 14:36:50,800 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:36:50,803 - DEBUG - interactive is False
+2025-09-28 14:36:50,803 - DEBUG - platform is win32
+2025-09-28 14:36:50,875 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:36:50,888 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 14:36:57,863 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-28 14:36:57,863 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-28 14:36:57,866 - INFO -  * Restarting with stat
+2025-09-28 14:37:01,598 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 14:37:01,606 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:37:01,608 - DEBUG - interactive is False
+2025-09-28 14:37:01,609 - DEBUG - platform is win32
+2025-09-28 14:37:01,702 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 14:37:01,705 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 14:37:06,860 - WARNING -  * Debugger is active!
+2025-09-28 14:37:06,864 - INFO -  * Debugger PIN: 134-175-910
+2025-09-28 14:37:15,473 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "GET / HTTP/1.1" 200 -
+2025-09-28 14:37:15,884 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,884 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,884 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,902 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,910 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,911 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,913 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,914 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:15,942 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:15] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 14:37:16,070 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:16] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-28 14:37:18,089 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:18] "GET /upload HTTP/1.1" 200 -
+2025-09-28 14:37:18,163 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:18] "GET /static/css/videoUpload.css HTTP/1.1" 200 -
+2025-09-28 14:37:18,170 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:18] "GET /static/img/bg_Upload.jpg HTTP/1.1" 200 -
+2025-09-28 14:37:18,261 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-28 14:37:24,382 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "GET / HTTP/1.1" 200 -
+2025-09-28 14:37:24,441 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,444 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,447 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,457 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,460 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,467 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,468 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,475 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 14:37:24,492 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:24] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 14:37:26,992 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:26] "GET /upload HTTP/1.1" 200 -
+2025-09-28 14:37:27,058 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:27] "[36mGET /static/css/videoUpload.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:27,063 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:27] "[36mGET /static/img/bg_Upload.jpg HTTP/1.1[0m" 304 -
+2025-09-28 14:37:28,689 - WARNING - File upload attempted with no file selected.
+2025-09-28 14:37:28,689 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:28] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-09-28 14:37:28,716 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:28] "GET /upload HTTP/1.1" 200 -
+2025-09-28 14:37:28,768 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:28] "[36mGET /static/css/videoUpload.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:28,771 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:28] "[36mGET /static/img/bg_Upload.jpg HTTP/1.1[0m" 304 -
+2025-09-28 14:37:34,062 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:34] "GET /upload HTTP/1.1" 200 -
+2025-09-28 14:37:48,365 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "GET /login_page HTTP/1.1" 200 -
+2025-09-28 14:37:48,425 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:48,427 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:48,428 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 14:37:48,445 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "GET /static/css/manage_cam.css HTTP/1.1" 200 -
+2025-09-28 14:37:48,493 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "GET /static/img/blue_secuirity.json HTTP/1.1" 200 -
+2025-09-28 14:37:48,496 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-28 14:37:48,612 - INFO - 127.0.0.1 - - [28/Sep/2025 14:37:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-28 19:06:41,287 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 19:06:41,287 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:06:41,305 - DEBUG - interactive is False
+2025-09-28 19:06:41,306 - DEBUG - platform is win32
+2025-09-28 19:06:41,403 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:06:41,406 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 19:06:49,415 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-28 19:06:49,415 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-28 19:06:49,424 - INFO -  * Restarting with stat
+2025-09-28 19:06:53,170 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 19:06:53,180 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:06:53,190 - DEBUG - interactive is False
+2025-09-28 19:06:53,190 - DEBUG - platform is win32
+2025-09-28 19:06:53,264 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:06:53,269 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 19:06:58,499 - WARNING -  * Debugger is active!
+2025-09-28 19:06:58,506 - INFO -  * Debugger PIN: 134-175-910
+2025-09-28 19:07:03,268 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "GET / HTTP/1.1" 200 -
+2025-09-28 19:07:03,664 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,673 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,675 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,685 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,686 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,692 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,696 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,701 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,733 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 19:07:03,863 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:03] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-28 19:07:11,458 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "GET /login_page HTTP/1.1" 200 -
+2025-09-28 19:07:11,530 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:11,532 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:11,535 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:11,553 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:11,562 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-28 19:07:11,572 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-28 19:07:11,686 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-28 19:07:19,434 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:19] "GET /login_page HTTP/1.1" 200 -
+2025-09-28 19:07:19,488 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:19] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:19,492 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:19] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:19,500 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:19] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:19,507 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:19] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:19,521 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:19] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-28 19:07:22,492 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "GET /login_page HTTP/1.1" 200 -
+2025-09-28 19:07:22,562 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:22,570 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:22,573 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:22,578 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:07:22,578 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-28 19:07:22,598 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-28 19:07:22,671 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-09-28 19:07:22,687 - INFO - 127.0.0.1 - - [28/Sep/2025 19:07:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-28 19:12:25,041 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 19:12:25,056 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:12:25,059 - DEBUG - interactive is False
+2025-09-28 19:12:25,060 - DEBUG - platform is win32
+2025-09-28 19:12:25,149 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:12:25,153 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 19:12:32,385 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-28 19:12:32,386 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-28 19:12:32,390 - INFO -  * Restarting with stat
+2025-09-28 19:12:36,451 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 19:12:36,468 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:12:36,468 - DEBUG - interactive is False
+2025-09-28 19:12:36,474 - DEBUG - platform is win32
+2025-09-28 19:12:36,536 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:12:36,536 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 19:12:42,289 - WARNING -  * Debugger is active!
+2025-09-28 19:12:42,304 - INFO -  * Debugger PIN: 134-175-910
+2025-09-28 19:12:43,088 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "GET / HTTP/1.1" 200 -
+2025-09-28 19:12:43,414 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,425 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,430 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,438 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,445 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,448 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,449 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,451 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,483 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 19:12:43,581 - INFO - 127.0.0.1 - - [28/Sep/2025 19:12:43] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-28 19:34:25,502 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 19:34:25,513 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:34:25,518 - DEBUG - interactive is False
+2025-09-28 19:34:25,520 - DEBUG - platform is win32
+2025-09-28 19:34:25,617 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:34:25,621 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 19:34:33,746 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-28 19:34:33,746 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-28 19:34:33,755 - INFO -  * Restarting with stat
+2025-09-28 19:34:37,868 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 19:34:37,874 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:34:37,877 - DEBUG - interactive is False
+2025-09-28 19:34:37,877 - DEBUG - platform is win32
+2025-09-28 19:34:37,947 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 19:34:37,951 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 19:34:44,715 - WARNING -  * Debugger is active!
+2025-09-28 19:34:44,719 - INFO -  * Debugger PIN: 134-175-910
+2025-09-28 19:34:45,901 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:45] "GET / HTTP/1.1" 200 -
+2025-09-28 19:34:46,159 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,174 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,178 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,178 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,192 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,192 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,200 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,218 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 19:34:46,218 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:46] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 19:34:51,031 - INFO - 127.0.0.1 - - [28/Sep/2025 19:34:51] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-28 21:47:09,487 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 21:47:09,487 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:47:09,500 - DEBUG - interactive is False
+2025-09-28 21:47:09,501 - DEBUG - platform is win32
+2025-09-28 21:47:09,646 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:47:09,659 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 21:47:17,004 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-28 21:47:17,004 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-28 21:47:17,014 - INFO -  * Restarting with stat
+2025-09-28 21:47:21,565 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 21:47:21,570 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:47:21,572 - DEBUG - interactive is False
+2025-09-28 21:47:21,572 - DEBUG - platform is win32
+2025-09-28 21:47:21,645 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:47:21,648 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 21:47:27,524 - WARNING -  * Debugger is active!
+2025-09-28 21:47:27,528 - INFO -  * Debugger PIN: 134-175-910
+2025-09-28 21:47:28,121 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "GET / HTTP/1.1" 200 -
+2025-09-28 21:47:28,435 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,438 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,440 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,454 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,459 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,464 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,466 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,522 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "GET /static/css/nav-animation.css HTTP/1.1" 200 -
+2025-09-28 21:47:28,542 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 21:47:28,637 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:28] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-28 21:47:59,816 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "GET / HTTP/1.1" 200 -
+2025-09-28 21:47:59,880 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,880 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,882 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,888 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,899 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,901 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,908 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,916 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 21:47:59,939 - INFO - 127.0.0.1 - - [28/Sep/2025 21:47:59] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 21:48:01,213 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:01] "GET /upload HTTP/1.1" 200 -
+2025-09-28 21:48:01,269 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:01] "[36mGET /static/css/videoUpload.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:01,274 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:01] "[36mGET /static/img/bg_Upload.jpg HTTP/1.1[0m" 304 -
+2025-09-28 21:48:05,812 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:05] "GET /login_page HTTP/1.1" 200 -
+2025-09-28 21:48:05,876 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:05] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:05,878 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:05] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:05,879 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:05] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:05,882 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:05] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:05,902 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:05] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-28 21:48:05,904 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:05] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-28 21:48:06,023 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-28 21:48:08,795 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:08] "GET /register_page HTTP/1.1" 200 -
+2025-09-28 21:48:08,858 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:08] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:08,869 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:08] "GET /static/img/signup.jpg HTTP/1.1" 200 -
+2025-09-28 21:48:10,882 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:10] "GET /login_page HTTP/1.1" 200 -
+2025-09-28 21:48:10,931 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:10] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:10,936 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:10] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:10,939 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:10] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:10,942 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:10] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:10,944 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:10] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-28 21:48:10,966 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:10] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-28 21:48:11,039 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-28 21:48:15,980 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:15] "GET / HTTP/1.1" 200 -
+2025-09-28 21:48:16,016 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,029 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,034 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,036 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,039 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,043 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,055 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,057 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 21:48:16,070 - INFO - 127.0.0.1 - - [28/Sep/2025 21:48:16] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,268 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "GET / HTTP/1.1" 200 -
+2025-09-28 21:52:19,350 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,373 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,373 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,373 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,373 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,374 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,398 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "GET /static/css/nav-animation.css HTTP/1.1" 200 -
+2025-09-28 21:52:19,400 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,466 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 21:52:19,567 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:19] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-28 21:52:26,847 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "GET / HTTP/1.1" 200 -
+2025-09-28 21:52:26,906 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,916 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,926 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,936 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,950 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,952 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,960 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,978 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 21:52:26,980 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:26] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,543 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "GET / HTTP/1.1" 200 -
+2025-09-28 21:52:44,602 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,616 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,626 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,628 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,635 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,640 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,655 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,660 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 21:52:44,691 - INFO - 127.0.0.1 - - [28/Sep/2025 21:52:44] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 21:53:29,701 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 21:53:29,708 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:53:29,711 - DEBUG - interactive is False
+2025-09-28 21:53:29,713 - DEBUG - platform is win32
+2025-09-28 21:53:29,796 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:53:29,799 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 21:53:37,287 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-28 21:53:37,287 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-28 21:53:37,293 - INFO -  * Restarting with stat
+2025-09-28 21:53:41,845 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-28 21:53:41,855 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:53:41,865 - DEBUG - interactive is False
+2025-09-28 21:53:41,866 - DEBUG - platform is win32
+2025-09-28 21:53:41,968 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-28 21:53:41,971 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-28 21:53:48,233 - WARNING -  * Debugger is active!
+2025-09-28 21:53:48,241 - INFO -  * Debugger PIN: 134-175-910
+2025-09-28 21:53:48,940 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:48] "GET / HTTP/1.1" 200 -
+2025-09-28 21:53:49,119 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-28 21:53:49,135 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-28 21:53:49,145 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-28 21:53:49,156 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-28 21:53:49,159 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-28 21:53:49,164 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-28 21:53:49,179 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "GET /static/css/nav-animation.css HTTP/1.1" 200 -
+2025-09-28 21:53:49,180 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-28 21:53:49,194 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:49] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-28 21:53:51,359 - INFO - 127.0.0.1 - - [28/Sep/2025 21:53:51] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-29 17:24:22,752 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-29 17:24:22,765 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:24:22,768 - DEBUG - interactive is False
+2025-09-29 17:24:22,770 - DEBUG - platform is win32
+2025-09-29 17:24:22,902 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:24:22,906 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-29 17:24:31,920 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-29 17:24:31,920 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 17:24:31,924 - INFO -  * Restarting with stat
+2025-09-29 17:24:36,979 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-29 17:24:36,981 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:24:36,989 - DEBUG - interactive is False
+2025-09-29 17:24:36,989 - DEBUG - platform is win32
+2025-09-29 17:24:37,072 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:24:37,075 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-29 17:24:44,758 - WARNING -  * Debugger is active!
+2025-09-29 17:24:44,769 - INFO -  * Debugger PIN: 134-175-910
+2025-09-29 17:24:45,488 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "GET / HTTP/1.1" 200 -
+2025-09-29 17:24:45,842 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,844 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,846 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,851 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,861 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,864 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,881 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,889 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-29 17:24:45,928 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:45] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-29 17:24:46,057 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:46] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-29 17:24:53,717 - INFO - 127.0.0.1 - - [29/Sep/2025 17:24:53] "[31m[1mGET /complaints HTTP/1.1[0m" 401 -
+2025-09-29 17:25:04,745 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:04] "[31m[1mGET /complaints HTTP/1.1[0m" 401 -
+2025-09-29 17:25:52,316 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "GET /login_page HTTP/1.1" 200 -
+2025-09-29 17:25:52,401 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:25:52,405 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:25:52,415 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:25:52,443 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:25:52,471 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-29 17:25:52,546 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:25:52,658 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:25:53,796 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:53] "GET /register_page HTTP/1.1" 200 -
+2025-09-29 17:25:53,863 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:53] "GET /static/img/signup.jpg HTTP/1.1" 200 -
+2025-09-29 17:25:53,863 - INFO - 127.0.0.1 - - [29/Sep/2025 17:25:53] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:01,668 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "GET /login_page HTTP/1.1" 200 -
+2025-09-29 17:26:01,714 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:01,721 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:01,726 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:01,730 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:01,738 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-29 17:26:01,747 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:26:01,830 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:26:07,516 - WARNING - Invalid login attempt.
+2025-09-29 17:26:07,517 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-29 17:26:07,533 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "GET /login HTTP/1.1" 200 -
+2025-09-29 17:26:07,593 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:07,599 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:07,605 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:07,609 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:07,611 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-29 17:26:07,624 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:26:07,721 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:26:16,121 - WARNING - Invalid login attempt.
+2025-09-29 17:26:16,124 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-29 17:26:16,132 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "GET /login HTTP/1.1" 200 -
+2025-09-29 17:26:16,198 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:16,204 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:16,211 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:16,215 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:16,256 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:26:16,343 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:26:18,027 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:18] "GET /register_page HTTP/1.1" 200 -
+2025-09-29 17:26:18,092 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:18] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:18,093 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:18] "[36mGET /static/img/signup.jpg HTTP/1.1[0m" 304 -
+2025-09-29 17:26:24,822 - INFO - New user Shivram  registered successfully.
+2025-09-29 17:26:24,824 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-09-29 17:26:24,832 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "GET /login HTTP/1.1" 200 -
+2025-09-29 17:26:24,881 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:24,895 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:24,895 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:24,897 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:24,898 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-29 17:26:24,918 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:26:24,967 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:26:29,753 - INFO - User Shivram  logged in successfully.
+2025-09-29 17:26:29,755 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-29 17:26:29,782 - INFO - Dashboard accessed by user Shivram .
+2025-09-29 17:26:29,898 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:29] "GET /dashboard HTTP/1.1" 200 -
+2025-09-29 17:26:29,989 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:29] "GET /static/css/style_dash.css HTTP/1.1" 200 -
+2025-09-29 17:26:30,037 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:30] "GET /static/js/script_dash.js HTTP/1.1" 200 -
+2025-09-29 17:26:38,697 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:26:38,745 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:38] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:26:38,789 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:38] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:26:38,795 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:38] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:26:38,798 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:38] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:26:43,060 - INFO - 127.0.0.1 - - [29/Sep/2025 17:26:43] "[33mGET /complaints/14 HTTP/1.1[0m" 404 -
+2025-09-29 17:27:14,882 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:27:14,892 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:14] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:27:14,933 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:14] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:27:14,939 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:14] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:14,945 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:14] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:27:17,752 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:27:17,753 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:17] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:27:17,780 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:17] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:27:17,786 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:17] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:17,791 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:17] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:27:18,160 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:27:18,161 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:27:18,193 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:27:18,197 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:18,203 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:27:18,315 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:27:18,315 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:27:18,361 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:27:18,369 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:18,370 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:27:18,483 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:27:18,483 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:27:18,524 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:27:18,531 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:18,532 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:18] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:27:19,195 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:19] "GET /manage_camera HTTP/1.1" 200 -
+2025-09-29 17:27:19,234 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:19] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:19,239 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:19] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:19,251 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:19] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:27:19,265 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:19] "GET /static/img/manage_Cam_bg.png HTTP/1.1" 200 -
+2025-09-29 17:27:21,891 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:27:21,895 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:21] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:27:21,938 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:21] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:27:21,943 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:21] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:27:21,948 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:21] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:27:23,219 - INFO - 127.0.0.1 - - [29/Sep/2025 17:27:23] "[33mGET /complaints/14 HTTP/1.1[0m" 404 -
+2025-09-29 17:28:00,938 - INFO - Notifications accessed by user Shivram .
+2025-09-29 17:28:01,019 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "GET /notifications HTTP/1.1" 200 -
+2025-09-29 17:28:01,062 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:28:01,073 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:01,075 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:28:01,735 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "GET /manage_camera HTTP/1.1" 200 -
+2025-09-29 17:28:01,793 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:01,798 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:01,802 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "[36mGET /static/img/manage_Cam_bg.png HTTP/1.1[0m" 304 -
+2025-09-29 17:28:01,810 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:01] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:28:05,084 - INFO - Dashboard accessed by user Shivram .
+2025-09-29 17:28:05,086 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:05] "GET /dashboard HTTP/1.1" 200 -
+2025-09-29 17:28:05,137 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:05] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:05,139 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:05] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:28:05,947 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:05] "GET /analytics HTTP/1.1" 200 -
+2025-09-29 17:28:05,993 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:05] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:06,014 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:06] "GET /static/css/analytics.css HTTP/1.1" 200 -
+2025-09-29 17:28:11,939 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:11] "GET /analytics HTTP/1.1" 200 -
+2025-09-29 17:28:11,984 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:11] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:12,000 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:12] "[36mGET /static/css/analytics.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:14,527 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:14] "GET /about HTTP/1.1" 200 -
+2025-09-29 17:28:14,572 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:14] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:14,574 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:14] "[33mGET /indshield_product_image.jpg HTTP/1.1[0m" 404 -
+2025-09-29 17:28:14,588 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:14] "GET /static/css/about.css HTTP/1.1" 200 -
+2025-09-29 17:28:14,623 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:14] "GET /static/js/about.js HTTP/1.1" 200 -
+2025-09-29 17:28:20,304 - INFO - Dashboard accessed by user Shivram .
+2025-09-29 17:28:20,306 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:20] "GET /dashboard HTTP/1.1" 200 -
+2025-09-29 17:28:20,354 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:20] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:20,366 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:20] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:28:22,546 - INFO - Notifications accessed by user Shivram .
+2025-09-29 17:28:22,548 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:22] "GET /notifications HTTP/1.1" 200 -
+2025-09-29 17:28:22,611 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:22] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:28:22,615 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:22] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:22,620 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:22] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:28:23,003 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:28:23,003 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:23] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:28:23,046 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:23] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:28:23,053 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:23] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:28:23,055 - INFO - 127.0.0.1 - - [29/Sep/2025 17:28:23] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:30:20,385 - INFO - 127.0.0.1 - - [29/Sep/2025 17:30:20] "[33mGET /complaints/14 HTTP/1.1[0m" 404 -
+2025-09-29 17:35:03,773 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-29 17:35:03,779 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:35:03,782 - DEBUG - interactive is False
+2025-09-29 17:35:03,783 - DEBUG - platform is win32
+2025-09-29 17:35:03,868 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:35:03,871 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-29 17:35:11,600 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-29 17:35:11,600 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 17:35:11,604 - INFO -  * Restarting with stat
+2025-09-29 17:35:13,979 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:13] "GET / HTTP/1.1" 200 -
+2025-09-29 17:35:14,073 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,079 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,091 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,094 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,096 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,119 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,119 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,122 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,227 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-29 17:35:14,340 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:14] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-29 17:35:17,218 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-29 17:35:17,233 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:35:17,237 - DEBUG - interactive is False
+2025-09-29 17:35:17,237 - DEBUG - platform is win32
+2025-09-29 17:35:17,345 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:35:17,350 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-29 17:35:20,384 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "GET /login_page HTTP/1.1" 200 -
+2025-09-29 17:35:20,442 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:20,445 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:20,451 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:20,458 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:20,479 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-29 17:35:20,481 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:35:20,590 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:35:24,735 - INFO - User Shivram  logged in successfully.
+2025-09-29 17:35:24,748 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-29 17:35:24,771 - INFO - Dashboard accessed by user Shivram .
+2025-09-29 17:35:24,781 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:24] "GET /dashboard HTTP/1.1" 200 -
+2025-09-29 17:35:24,840 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:24] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:24,841 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:24] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:35:25,565 - WARNING -  * Debugger is active!
+2025-09-29 17:35:25,570 - INFO -  * Debugger PIN: 134-175-910
+2025-09-29 17:35:26,779 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:35:27,015 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:27] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:35:27,052 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:27] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:35:27,059 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:27] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:27,064 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:27] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:35:27,989 - INFO - complaint form accessed for user ID 14.
+2025-09-29 17:35:28,004 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:28] "GET /complaint/14 HTTP/1.1" 200 -
+2025-09-29 17:35:28,067 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:28] "[33mGET /static/css/complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:35:57,869 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "GET / HTTP/1.1" 200 -
+2025-09-29 17:35:57,936 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:57,962 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:57,962 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:57,963 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:57,964 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:57,965 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:57,966 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:35:57,981 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-29 17:35:58,048 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:58] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-29 17:35:58,130 - INFO - 127.0.0.1 - - [29/Sep/2025 17:35:58] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-29 17:36:02,888 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:02] "GET /login_page HTTP/1.1" 200 -
+2025-09-29 17:36:02,947 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:02] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:36:02,953 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:02] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:36:02,960 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:02] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:36:02,961 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:02] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:36:02,976 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:02] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-29 17:36:02,980 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:02] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:36:03,089 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:36:06,883 - INFO - User Shivram  logged in successfully.
+2025-09-29 17:36:06,883 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-29 17:36:06,901 - INFO - Dashboard accessed by user Shivram .
+2025-09-29 17:36:06,901 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:06] "GET /dashboard HTTP/1.1" 200 -
+2025-09-29 17:36:06,966 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:06] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:36:06,967 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:06] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:36:09,201 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:36:09,201 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:09] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:36:09,261 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:09] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:36:09,263 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:09] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:36:09,268 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:09] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:36:11,668 - INFO - complaint form accessed for user ID 14.
+2025-09-29 17:36:11,669 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:11] "GET /complaint/14 HTTP/1.1" 200 -
+2025-09-29 17:36:11,698 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:11] "[33mGET /static/css/complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:36:15,252 - INFO - complaint submitted successfully by user ID 14.
+2025-09-29 17:36:15,252 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:15] "[32mPOST /14/submit_complaint_submited HTTP/1.1[0m" 302 -
+2025-09-29 17:36:15,268 - INFO - complaint form accessed for user ID 14.
+2025-09-29 17:36:15,271 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:15] "GET /complaint/14 HTTP/1.1" 200 -
+2025-09-29 17:36:15,314 - INFO - 127.0.0.1 - - [29/Sep/2025 17:36:15] "[33mGET /static/css/complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:38:04,675 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-29 17:38:04,681 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:38:04,681 - DEBUG - interactive is False
+2025-09-29 17:38:04,684 - DEBUG - platform is win32
+2025-09-29 17:38:04,761 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:38:04,763 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-29 17:38:11,414 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-29 17:38:11,414 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 17:38:11,417 - INFO -  * Restarting with stat
+2025-09-29 17:38:15,168 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "GET / HTTP/1.1" 200 -
+2025-09-29 17:38:15,296 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,300 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,300 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,300 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,302 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,302 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,318 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,341 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,352 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-29 17:38:15,497 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:15] "[35m[1mGET /static/img/motionamp.mp4 HTTP/1.1[0m" 206 -
+2025-09-29 17:38:15,792 - DEBUG - matplotlib data path: C:\Users\DELL\IndShield\venv\Lib\site-packages\matplotlib\mpl-data
+2025-09-29 17:38:15,799 - DEBUG - CONFIGDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:38:15,801 - DEBUG - interactive is False
+2025-09-29 17:38:15,802 - DEBUG - platform is win32
+2025-09-29 17:38:15,968 - DEBUG - CACHEDIR=C:\Users\DELL\.matplotlib
+2025-09-29 17:38:15,977 - DEBUG - Using fontManager instance from C:\Users\DELL\.matplotlib\fontlist-v330.json
+2025-09-29 17:38:18,223 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "GET / HTTP/1.1" 200 -
+2025-09-29 17:38:18,272 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/css/style1.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,284 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/css/style2.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,286 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,286 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,290 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,303 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,314 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/css/nav-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,314 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-29 17:38:18,329 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:18] "[36mGET /static/img/Smart%20Industry.json HTTP/1.1[0m" 304 -
+2025-09-29 17:38:25,078 - WARNING -  * Debugger is active!
+2025-09-29 17:38:25,086 - INFO -  * Debugger PIN: 134-175-910
+2025-09-29 17:38:31,826 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:31] "GET /upload HTTP/1.1" 200 -
+2025-09-29 17:38:31,899 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:31] "[36mGET /static/img/bg_Upload.jpg HTTP/1.1[0m" 304 -
+2025-09-29 17:38:31,926 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:31] "[36mGET /static/css/videoUpload.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:37,534 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "GET /login_page HTTP/1.1" 200 -
+2025-09-29 17:38:37,591 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "[36mGET /static/css/dark-theme.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:37,594 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "[36mGET /static/css/glass-spark.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:37,596 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "[36mGET /static/css/manage_cam.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:37,597 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "[36mGET /static/css/text-animation.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:37,618 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "[35m[1mGET /static/sounds/welcome_Login.mp3 HTTP/1.1[0m" 206 -
+2025-09-29 17:38:37,619 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "[36mGET /static/img/blue_secuirity.json HTTP/1.1[0m" 304 -
+2025-09-29 17:38:37,708 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-29 17:38:40,903 - INFO - User Shivram  logged in successfully.
+2025-09-29 17:38:40,906 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-29 17:38:40,931 - INFO - Dashboard accessed by user Shivram .
+2025-09-29 17:38:40,936 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:40] "GET /dashboard HTTP/1.1" 200 -
+2025-09-29 17:38:40,990 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:40] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:38:40,991 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:40] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:42,980 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:38:42,996 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:42] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:38:43,042 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:43] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:38:43,045 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:43] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:43,047 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:43] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:38:46,531 - INFO - complaint with ID 2 deleted by user Shivram .
+2025-09-29 17:38:46,531 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:46] "[32mGET /delete/2 HTTP/1.1[0m" 302 -
+2025-09-29 17:38:46,545 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:38:46,546 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:46] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:38:46,583 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:46] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:38:46,590 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:46] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:38:46,590 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:46] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:48,666 - INFO - Complaints accessed by user Shivram .
+2025-09-29 17:38:48,672 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:48] "GET /complaints HTTP/1.1" 200 -
+2025-09-29 17:38:48,704 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:48] "[33mGET /static/css/notifications_complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:38:48,710 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:48] "[36mGET /static/css/style_dash.css HTTP/1.1[0m" 304 -
+2025-09-29 17:38:48,712 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:48] "[36mGET /static/js/script_dash.js HTTP/1.1[0m" 304 -
+2025-09-29 17:38:51,623 - INFO - complaint form accessed for user ID 14.
+2025-09-29 17:38:51,625 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:51] "GET /complaint/14 HTTP/1.1" 200 -
+2025-09-29 17:38:51,656 - INFO - 127.0.0.1 - - [29/Sep/2025 17:38:51] "[33mGET /static/css/complaint.css HTTP/1.1[0m" 404 -
+2025-09-29 17:39:01,225 - INFO - complaint form accessed for user ID 14.
+2025-09-29 17:39:01,227 - INFO - 127.0.0.1 - - [29/Sep/2025 17:39:01] "GET /complaint/14 HTTP/1.1" 200 -
+2025-09-29 17:39:01,331 - INFO - 127.0.0.1 - - [29/Sep/2025 17:39:01] "[33mGET /static/css/complaint.css HTTP/1.1[0m" 404 -
