@@ -359,7 +359,7 @@ def delete(id):
     except Exception as e:
         logging.error(f"Error deleting complaint with ID {id}: {str(e)}")
         flash('An error occurred while deleting the complaint!', 'error')
-    return redirect("/complaint")
+    return redirect("/complaints")
 
 @app.route('/delete_notification/<int:id>')
 @login_required

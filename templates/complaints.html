@@ -19,7 +19,7 @@
         {% include 'sidebar.html' %}
         <div class="container">
             <h1>All Complaints</h1>
-            <p>Share your unique form <a href="/complaints/{{ user.id }}" target="_blank">link</a> with your organization.</p>
+            <p>Share your unique form <a href="/complaint/{{ user.id }}" target="_blank">link</a> with your organization.</p>
             
             {% if complaints|length == 0 %}
                 <div class="alert alert-dark" role="alert">

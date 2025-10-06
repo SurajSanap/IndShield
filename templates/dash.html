@@ -11,30 +11,284 @@
     <link rel="stylesheet" href="static/css/style_dash.css">
     
     <title>Cam Dashboard</title>
+    <style>
+        .main {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .setup-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 50px;
+            color: white;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .setup-card h2 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+        
+        .setup-card .icon {
+            font-size: 80px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .instruction-list {
+            text-align: left;
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .instruction-list h5 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        
+        .instruction-list ol {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .instruction-list ol > li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 50px;
+            position: relative;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        
+        .instruction-list ol > li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(255,255,255,0.3);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .instruction-list ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .instruction-list ul li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        .instruction-list strong {
+            color: #ffd700;
+            font-weight: 600;
+        }
+        
+        .btn-setup {
+            background: white;
+            color: #667eea;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-setup:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            color: #764ba2;
+        }
+        
+        .video-container {
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .video-container h3 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .video-feed {
+            border-radius: 15px;
+            border: 3px solid #e9ecef;
+            width: 100%;
+            max-width: 100%;
+            height: 600px;
+        }
+        
+        .detection-badges {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .detection-badges .badge {
+            padding: 10px 18px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 20px;
+        }
+        
+        .help-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .help-section p {
+            font-size: 15px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .container-fluid {
+            max-width: 1400px;
+        }
+        
+        h1.page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .setup-card {
+                padding: 30px 20px;
+            }
+            
+            .video-feed {
+                height: 400px;
+            }
+            
+            h1.page-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
         {% include 'sidebar.html' %}
-        <div class="main p-3 d-flex justify-content-center align-items-center">
-            <div class="text-center">
+        <div class="main p-4">
+            <div class="container-fluid">
+                <h1 class="page-title">Live Camera Dashboard</h1>
 
                 <div id="live-feeds">
                     {% if cameras %}
                         {% for camera in cameras %}
-                            <h3>Camera: {{ camera.Cam_id }}</h3>
-                            <div class="d-flex justify-content-center position-relative">
-                                <iframe src="/video_feed/{{ camera.Cam_id }}" width="1000" height="500" class="video-feed"></iframe>
-                                <!-- Overlay for Pose Alerts -->
+                            <div class="video-container">
+                                <h3>
+                                    <i class="lni lni-camera"></i> Camera: {{ camera.Cam_id }}
+                                </h3>
                                 
-                                <div id="hand-alert-{{ camera.Cam_id }}" class="hand-alert">
-                                    <!-- Dynamic hand gesture alert will be updated via JS -->
+                                <div class="detection-badges">
+                                    {% if camera.fire_detection %}
+                                        <span class="badge bg-danger">Fire Detection Active</span>
+                                    {% endif %}
+                                    {% if camera.pose_alert %}
+                                        <span class="badge bg-warning text-dark">Pose Alert Active</span>
+                                    {% endif %}
+                                    {% if camera.restricted_zone %}
+                                        <span class="badge bg-primary">Restricted Zone Monitoring</span>
+                                    {% endif %}
+                                    {% if camera.safety_gear_detection %}
+                                        <span class="badge bg-success">Safety Gear Detection Active</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="position-relative mt-3">
+                                    <iframe src="/video_feed/{{ camera.Cam_id }}" 
+                                            class="video-feed"
+                                            title="Camera Feed {{ camera.Cam_id }}"
+                                            frameborder="0"></iframe>
+                                    
+                                    <div id="hand-alert-{{ camera.Cam_id }}" class="hand-alert"></div>
                                 </div>
                             </div>
                         {% endfor %}
                     {% else %}
-                        <div class="alert alert-dark" role="alert">
-                            No cameras Found!!
+                        <div class="setup-card text-center">
+                            <div class="icon">
+                                <i class="lni lni-video"></i>
+                            </div>
+                            <h2>Get Started with IndShield</h2>
+                            <p class="lead mb-0">No cameras found. Follow these simple steps to begin monitoring.</p>
+                            
+                            <div class="instruction-list">
+                                <h5><i class="lni lni-checkmark-circle"></i> Setup Your First Camera</h5>
+                                <ol>
+                                    <li>
+                                        <strong>Open Manage Cameras</strong><br>
+                                        Click on "Manage Cameras" in the sidebar menu
+                                    </li>
+                                    <li>
+                                        <strong>Add Camera Details</strong><br>
+                                        Click "Add New Camera" button and enter:
+                                        <ul>
+                                            <li>Camera ID: Use "0" for built-in webcam, or enter IP address (e.g., 192.168.1.100:8080) for network cameras</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>Choose Detection Features</strong><br>
+                                        Select which safety features you need:
+                                        <ul>
+                                            <li><strong>Fire Detection:</strong> Monitors for fire hazards in real-time</li>
+                                            <li><strong>Pose Alert:</strong> Detects emergency hand gestures (L-shape pose)</li>
+                                            <li><strong>Restricted Zone:</strong> Alerts when someone enters prohibited areas</li>
+                                            <li><strong>Safety Gear:</strong> Ensures workers wear proper protective equipment</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>Save Configuration</strong><br>
+                                        Click "Save" to apply your camera settings
+                                    </li>
+                                    <li>
+                                        <strong>View Live Feed</strong><br>
+                                        Return to this dashboard to see your camera feed with active detection
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <a href="/manage_camera" class="btn-setup">
+                                <i class="lni lni-cog"></i> Set Up Your First Camera
+                            </a>
+
+                            <div class="help-section">
+                                <p class="mb-2"><strong>Need Help Getting Started?</strong></p>
+                                <p>
+                                    <strong>For Mobile Cameras:</strong> Download "IP Webcam" app, start the server, and use the IP address shown in the app.<br>
+                                    <strong>For USB Webcams:</strong> Simply enter "0" as the camera ID. Use "1" or "2" for additional connected cameras.
+                                </p>
+                            </div>
                         </div>
                     {% endif %}
                 </div>
@@ -42,9 +296,6 @@
             </div>
         </div>
     </div>
-</body>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
