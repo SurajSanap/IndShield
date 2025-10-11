@@ -1,22 +1,22 @@
 /* nav-animation.css */
 .animated-header {
     transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-  }
-  .animated-header:hover {
+}
+.animated-header:hover {
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 15px rgba(0, 255, 34, 0.2);
-  }
-  
-  .navbar ul li a {
+}
+
+.navbar ul li a {
     position: relative;
     transition: color 0.3s ease-in-out;
-  }
-  
-  .navbar ul li a:hover {
-    color: #000000;
-  }
-  
-  .navbar ul li a::after {
+}
+
+.navbar ul li a:hover {
+    color: #47b2e4; /* Same as underline color */
+}
+
+.navbar ul li a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -26,9 +26,8 @@
     left: 0;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .navbar ul li a:hover::after {
+}
+
+.navbar ul li a:hover::after {
     transform: scaleX(1);
-  }
-  
+}
