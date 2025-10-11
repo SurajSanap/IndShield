@@ -1,8 +1,20 @@
+
+
+# Logs
+*.log
+error.log
+
+# Local database
+instance/*.db
+
+# Python cache
+__pycache__/
+*.pyc
+
 env
 .vscode
 .env
 venv
 Documentation
 
-error.log
-app.log
+
