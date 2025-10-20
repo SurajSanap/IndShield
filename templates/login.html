@@ -18,6 +18,52 @@
     <link rel="stylesheet" href="/static/css/dark-theme.css">
     <link rel="stylesheet" href="/static/css/glass-spark.css">
     <link rel="stylesheet" href="/static/css/text-animation.css">
+    
+    <style>
+        .google-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .google-btn:hover {
+            background-color: #357ae8;
+        }
+        
+        .google-btn i {
+            font-size: 20px;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: #007bff;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #007bff;
+        }
+        
+        .divider span {
+            padding: 0 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,12 +96,20 @@
                     {% endwith %}
                 </div>
 
+                <!-- Google Sign-In Button -->
+                <a href="/google/login" class="google-btn">
+                    <i class="fab fa-google"></i>
+                    <span>Continue with Google</span>
+                </a>
+                
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
                 <form action="/login" method="POST">
-                    <div class="inputBx" >
+                    <div class="inputBx">
                         <label for="email" style="color: #007bff;">Email:</label>
-
                         <input type="email" id="email" name="email" style="color: white; background-color: black; border: 1px solid #007bff;" required>
-
                     </div>
                     <div class="inputBx">
                         <label for="password" style="color: #007bff;">Password:</label>
@@ -78,24 +132,22 @@
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: 'static/img/blue_secuirity.json' // Replace with your JSON animation file
+            path: 'static/img/blue_secuirity.json'
         });
     </script>
 
     <script>
-    window.addEventListener("DOMContentLoaded", function () {
-    if (!sessionStorage.getItem("soundPlayed")) { // Check if sound has already played
-        var audio = document.getElementById("loginSound");
-        audio.muted = true; // Start muted to bypass restrictions
-        audio.play().then(() => {
-            audio.muted = false; // Unmute after playback starts
-            setTimeout(() => audio.play(), 2000); // Delay before unmuted replay
-            sessionStorage.setItem("soundPlayed", "true"); // Store flag
-        }).catch(error => console.log("Autoplay blocked:", error));
-    }
-});
-
-
+        window.addEventListener("DOMContentLoaded", function () {
+            if (!sessionStorage.getItem("soundPlayed")) {
+                var audio = document.getElementById("loginSound");
+                audio.muted = true;
+                audio.play().then(() => {
+                    audio.muted = false;
+                    setTimeout(() => audio.play(), 2000);
+                    sessionStorage.setItem("soundPlayed", "true");
+                }).catch(error => console.log("Autoplay blocked:", error));
+            }
+        });
     </script>
 </body>
 

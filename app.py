@@ -4,7 +4,7 @@ import base64
 import threading
 import logging
 from datetime import datetime, timedelta
-from flask import Flask, render_template, Response, request, redirect, flash, jsonify, session
+from flask import Flask, render_template, Response, request, redirect, flash, jsonify, session, url_for
 import requests
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -14,6 +14,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from playsound import playsound
 from dotenv import load_dotenv
 from twilio.rest import Client
+from authlib.integrations.flask_client import OAuth
 
 # Load environment variables
 load_dotenv()
@@ -52,7 +53,25 @@ app.config["SQLALCHEMY_BINDS"] = {
     "alerts": "sqlite:///alerts.db"
 }
 app.config['UPLOAD_FOLDER'] = 'uploads'  
-ALLOWED_EXTENSIONS = {"mp4"}  
+ALLOWED_EXTENSIONS = {"mp4"} 
+
+# Google OAuth Configuration
+app.config['GOOGLE_CLIENT_ID'] = os.getenv('GOOGLE_CLIENT_ID')
+app.config['GOOGLE_CLIENT_SECRET'] = os.getenv('GOOGLE_CLIENT_SECRET')
+
+
+# Set up Authlib OAuth
+oauth = OAuth(app)
+CONF_URL = 'https://accounts.google.com/.well-known/openid-configuration'
+google = oauth.register(
+    name='google',
+    server_metadata_url=CONF_URL,
+    client_id=app.config['GOOGLE_CLIENT_ID'],
+    client_secret=app.config['GOOGLE_CLIENT_SECRET'],
+    client_kwargs={
+        'scope': 'openid email profile'
+    }
+)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
@@ -67,8 +86,10 @@ def load_user(user_id):
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(200), nullable=False)  # increased length for hashed passwords
+    password = db.Column(db.String(200), nullable=True)  # Changed to nullable=True
     email = db.Column(db.String(100), unique=True, nullable=False)
+    google_id = db.Column(db.String(100), unique=True, nullable=True)  # ADD THIS LINE
+    profile_pic = db.Column(db.String(200), nullable=True)  # ADD THIS LINE
 
 class Camera(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -129,6 +150,62 @@ def play_alert_sound():
         logging.error(f"Error playing alert sound: {str(e)}")
 
 # Routes
+
+@app.route('/google/login')
+def google_login():
+    """Initiate Google OAuth login"""
+    redirect_uri = url_for('google_callback', _external=True)
+    return google.authorize_redirect(redirect_uri)
+
+@app.route('/google/callback')
+def google_callback():
+    """Handle Google OAuth callback"""
+    try:
+        token = google.authorize_access_token()
+        user_info = token.get('userinfo')
+        
+        if user_info:
+            google_id = user_info.get('sub')
+            email = user_info.get('email')
+            name = user_info.get('name')
+            picture = user_info.get('picture')
+            
+            # Check if user exists
+            user = User.query.filter_by(email=email).first()
+            
+            if user:
+                # Update Google ID and profile picture if not set
+                if not user.google_id:
+                    user.google_id = google_id
+                if not user.profile_pic:
+                    user.profile_pic = picture
+                db.session.commit()
+            else:
+                # Create new user
+                user = User(
+                    username=name,
+                    email=email,
+                    google_id=google_id,
+                    profile_pic=picture,
+                    password=None  # No password for OAuth users
+                )
+                db.session.add(user)
+                db.session.commit()
+            
+            # Log the user in
+            login_user(user)
+            logging.info(f"User {user.username} logged in via Google OAuth.")
+            flash('Successfully logged in with Google!', 'success')
+            return redirect('/dashboard')
+        else:
+            flash('Failed to get user info from Google', 'error')
+            return redirect('/login_page')
+            
+    except Exception as e:
+        logging.error(f"Google OAuth error: {str(e)}")
+        flash(f'Authentication failed: {str(e)}', 'error')
+        return redirect('/login_page')
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -149,20 +226,24 @@ def login():
 
         if not email or not password_input:
             flash('Email or Password Missing!!')
-            return redirect('/login')
+            return redirect('/login_page')
 
         user = User.query.filter_by(email=email).first()
-        if user and check_password_hash(user.password, password_input):
+        
+        # Check if user exists and has a password (not OAuth user)
+        if user and user.password and check_password_hash(user.password, password_input):
             login_user(user)
             logging.info(f"User {user.username} logged in successfully.")
             return redirect('/dashboard')
+        elif user and not user.password:
+            flash('This account uses Google Sign-In. Please use the Google login button.')
+            return redirect('/login_page')
         else:
             flash('Invalid email or password')
             logging.warning("Invalid login attempt.")
-            return redirect('/login')
+            return redirect('/login_page')
 
     return render_template('login.html')
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -174,7 +255,7 @@ def register():
         if existing_user:
             flash('Username or email already exists.')
             logging.warning("Attempted registration with existing username or email.")
-            return redirect('/register')
+            return redirect('/register_page')
 
         hashed_password = generate_password_hash(password_input)
         new_user = User(username=username, email=email, password=hashed_password)
@@ -183,10 +264,9 @@ def register():
 
         flash('User registered successfully! Please log in.')
         logging.info(f"New user {username} registered successfully.")
-        return redirect('/login')
+        return redirect('/login_page')
 
     return render_template('register.html')
-
 @app.route('/upload')
 def upload():
     return render_template('VideoUpload.html')
@@ -850,5 +930,12 @@ def debug_gemini():
     except Exception as e:
         return jsonify({'success': False, 'error': f'Debug failed: {str(e)}'})
 
+# with app.app_context():
+#     db.create_all()
+#     print("Database tables created successfully!")
+
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
+
